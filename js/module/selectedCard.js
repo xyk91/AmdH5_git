@@ -30,7 +30,7 @@ define([
             $(".gift-black,.gift-panel").fadeIn("slow");
         });
         $('.card-wish').click(function () {
-            var regName = /^[\u4e00-\u9fa5]$/;
+            var regName = /[\u4e00-\u9fa5]/;
             var regPhone = /^1[345678]\d{9}$/;
             var gift = $('#gift').val();
             var name = $('#name').val();
