@@ -1,0 +1,229 @@
+@charset "UTF-8";
+
+/**
+ * 功能css，用于控制左侧菜单栏，顶部导航，一些组件等等
+ */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    /* background-color: #f1f1ef; */
+    max-width: 750px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, "\5b8b\4f53", sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    overflow: hidden;
+}
+
+a {
+    background-color: transparent;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+input[type=text]::-ms-clear {
+    /*移除IE10输入框中的删除图标*/
+    display: none;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    /*输入框的背景是什么颜色那么盒子内阴影就为什么颜色*/
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    /*设置字体颜色*/
+    -webkit-text-fill-color: #000;
+}
+
+.relative {
+    position: relative;
+}
+
+.cursor-point {
+    cursor: pointer;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: " ";
+    clear: both;
+}
+
+.clearfloat:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0
+}
+
+.clearfloat {
+    zoom: 1
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* flex 自适应 start */
+.d-fl {
+    display: flex;
+}
+
+.al-center {
+    align-items: center;
+}
+
+.al-end {
+    align-items: flex-end;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.jc-start {
+    justify-content: flex-start;
+}
+
+.jc-end {
+    justify-content: flex-end;
+}
+
+.jc-space-b {
+    justify-content: space-between;
+}
+
+.fl-sh {
+    flex-shrink: 0
+}
+
+.fl-1 {
+    flex: 1;
+}
+
+.fl-col {
+    flex-direction: column;
+}
+
+.al-center {
+    align-items: center;
+}
+
+.al-s-center {
+    align-self: center;
+}
+
+.al-s-start {
+    align-self: flex-start;
+}
+
+.al-s-end {
+    align-self: flex-end;
+}
+
+.fw-w {
+    flex-wrap: wrap;
+}
+
+/* flex 自适应 end */
+
+/* 弹窗 */
+/* .black,
+.gift-black {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: 9999;
+    display: none;
+
+} */
+.black,
+.gift-black {
+    height: 100%;
+    width: 750px;
+    margin-left: -375px;
+    position: fixed;
+    left: 50%;
+    top: 0;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: 9999;
+    display: none;
+
+}
+
+.panel,
+.gift-panel {
+    /* width: 80%; */
+    width: 70%;
+    position: fixed;
+    top: 25%;
+    /* left: 10%; */
+    left: 11%;
+    padding: 0.3rem 0.3rem;
+    background: #fff;
+    border-radius: .1rem;
+    text-align: center;
+    overflow: hidden;
+    z-index: 100000;
+    display: none;
+}
+
+#textareaContent {
+    width: 85%;
+    height: 4rem;
+    padding: 10px;
+    font-size: 0.28rem;
+}
+
+.tip {
+    text-align: center;
+    color: #fff;
+    font-size: 0.24rem;
+    font-weight: bold;
+    line-height: 1.9;
+}

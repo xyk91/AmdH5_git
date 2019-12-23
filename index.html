@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="js/lib/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+    <link href="js/lib/qq/frozenui.css" rel="stylesheet">
+    <link href="js/lib/qq/style.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <audio id="m_bg_music" src="img/宝宝巴士 - 铃儿响叮当 (伴奏).mp3" hidden="" loop=""></audio>
+    <!-- 首页 -->
+    <div class="ballBoxes">
+        <div class="ballPanel clearfloat">
+            <div class="clearfix">
+                <div class="wrap">
+                    <div class="ball one">
+                        <div class="ball_top ball_one">
+                            <!-- <p>1</p> -->
+                        </div>
+                    </div>
+                    <div class="ballShadow one_shadow"></div>
+                </div>
+                <div class="wrap">
+                    <div class="ball two">
+                        <div class="ball_top ball_two">
+                            <!-- <p>2</p> -->
+                        </div>
+                    </div>
+                    <div class="ballShadow two_shadow"></div>
+                </div>
+                <div class="wrap">
+                    <div class="ball three">
+                        <div class="ball_top ball_three">
+                            <!-- <p>3</p> -->
+                        </div>
+                    </div>
+                    <div class="ballShadow three_shadow"></div>
+                </div>
+                <div class="wrap">
+                    <div class="ball four">
+                        <div class="ball_top ball_four">
+                            <!-- <p>4</p> -->
+                        </div>
+                    </div>
+                    <div class="ballShadow four_shadow"></div>
+                </div>
+            </div>
+            <div class="tipBox">
+                <div class="tip">选择您的许愿球，写下祝福！</div>
+                <div class="tip">开启您的幸运之旅！</div>
+            </div>
+        </div>
+        <!--  -->
+        <div class='black'></div>
+        <div class='panel'>
+            <textarea rows="" cols="" id="textareaContent" class="textareaInp" style="resize:none"
+                placeholder="请写下您的祝福语！" maxlength="70"></textarea>
+            <div class="remainder"><span id="spanName">0</span>/70</div>
+            <div class="ui-btn-wrap ui-btn-wrap-middle">
+                <button class="ui-btn-lg-nowhole ui-btn-danger wish">
+                    我来许愿
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- 选卡 -->
+    <div class="cardContent">
+        <ul class="cardItem">
+            <li class="card cardOne animated fadeInUp"><span class="numOne num"><em>50元许愿礼</em></span>（限15个）</li>
+            <li class="card cardtwo animated fadeInUp"><span class="numTwo num"><em>100元许愿礼</em></span>（限4个）</li>
+            <li class="card cardThree animated fadeInUp">
+                <span class="numThree num"><em>300元许愿礼</em></span>（限1个）
+            </li>
+            <!-- <li class="cardInfo">
+                <p style="padding-right: 4rem;">小贴士：</p>
+                <p>合理选择许愿卡，</p>
+                <p>中奖几率更大哦！</p>
+            </li> -->
+        </ul>
+        <div class="cardInfo animated shake">
+            <p style="padding-right: 2rem;">小贴士：</p>
+            <p>合理选择许愿卡，</p>
+            <p>中奖几率更大哦！</p>
+        </div>
+        <!--  -->
+        <div class='gift-black'></div>
+        <div class='gift-panel'>
+            <div id="write">
+                <input type="text" name="name" id="name" class="inpText" placeholder="请写下您的真实姓名(限中文)" maxlength="20">
+                <input type="text" name="phone" id="phone" class="inpText" placeholder="请写下您的联系方式(手机号)！" maxlength="11">
+                <textarea rows="" cols="" id="gift" class="textareaInp" maxlength="100" style="resize:none"
+                    placeholder="请写下您想要的礼物！"></textarea>
+                <div class="remainder"><span id="giftSpanName">0</span>/100</div>
+                <div class="ui-btn-wrap ui-btn-wrap-middle">
+                    <button class="ui-btn-lg-nowhole ui-btn-danger card-wish">
+                        我要礼物
+                    </button>
+                </div>
+            </div>
+            <div id="collect">
+                <div class="singleVision"></div>
+                <div class="card-ball">
+                    <div class="card-ball-top ball-topPic">
+                    </div>
+                    <div class="card-ball-bottom ball-bottomPic"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 树 -->
+    <div class="treeBox">
+        <canvas id="snow"></canvas>
+        <div class="tree">
+            <img src="img/tree_b.png" alt="">
+            <div class="tree-ballBox ">
+                <div class="tree-ball ball-bg">
+                    <!-- <span>1</span> -->
+                </div>
+            </div>
+        </div>
+        <div class="ui-btn-wrap ui-btn-wrap-middle myWish">
+            <button class="ui-btn-lg-nowhole ui-btn-danger" disabled="disabled">
+                生成我的新年祝福
+            </button>
+        </div>
+        <div class="rules animated bounceInRight">
+            活动截止时间为：2019年12月31日24点，中奖名单将在1月2号由众信网官方公众号公布
+        </div>
+    </div>
+
+    <!-- 生成祝福语 -->
+    <div class="wish-bg" id="views">
+        <div class="blessing">
+            阿斯达萨达阿斯达萨达大萨达萨达所大所大所大所大啊萨达大萨达阿斯达阿斯达湿哒哒所大爱爱所大大按错 大大按错 大大啊萨达大萨达阿斯达阿斯达湿哒哒所
+        </div>
+        <div class="qr">
+            <img src="img/qr.jpg" alt="">
+            <p>扫码关注</p>
+            <p>参与许愿送福活动</p>
+        </div>
+        <div class="ui-btn-wrap ui-btn-wrap-middle generate">
+            <button class="ui-btn-lg-nowhole ui-btn-danger">
+                生成图片
+            </button>
+        </div>
+
+    </div>
+    <!-- 图片 -->
+    <div class="pic">
+        <img class="down2" src="" />
+    </div>
+
+
+    <script src="js/adapt.js"></script>
+    <script src="js/lib/require.js" data-main='js/app.js' async></script>
+</body>
+
+</html>

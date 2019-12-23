@@ -1,0 +1,820 @@
+.ballBoxes {
+    width: 100%;
+    height: 100%;
+    background: url('../img/圣诞背景.jpg') no-repeat;
+    background-size: 100% 100%;
+    display: block
+}
+
+/* .box {
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+    display: block;
+    background: black;
+    background: #5cabff;
+    background: -webkit-radial-gradient(100px 100px, circle, #5cabff, #000);
+    background: -moz-radial-gradient(100px 100px, circle, #5cabff, #000);
+    background: radial-gradient(100px 100px, circle, #5cabff, #000);
+    border-radius: 100%;
+} */
+
+.ballPanel {
+    position: absolute;
+    top: 65%;
+    margin: 0 20px;
+    -webkit-transform: translate(0%, -80%);
+    transform: translate(4%, -85%);
+}
+
+.wrap {
+    width: 24%;
+    /* margin-bottom: 20px; */
+    align-items: center;
+    /* background-color: #eee; */
+    display: flex;
+    flex-direction: column;
+    /* height: 100vh; */
+    justify-content: center;
+    float: left;
+    /* width: 100%; */
+}
+
+.ball {
+    width: 1.8rem;
+    height: 1.8rem;
+    position: relative;
+    z-index: 2;
+}
+
+.ball_top {
+    /* border-top: 7px solid black; */
+    content: '';
+    display: block;
+    position: relative;
+    /* height: 50%; */
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    border-radius: 100%;
+}
+
+/* .ball_top:before {
+    content: '';
+     animation: ball-before-anim 2s ease-in-out infinite; 
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.25) 29%, rgba(255, 255, 255, 0) 70%);
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0.15rem;
+    left: 0.2rem;
+    z-index: 4;
+} */
+
+.ball_top p {
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: 0.4rem;
+    color: #fff;
+}
+
+.one {
+    animation: ball-bounce 1.2s ease-in-out 0.5s infinite;
+}
+
+.two {
+    animation: ball-bounce 1.2s ease-in-out 1s infinite;
+}
+
+.three {
+    animation: ball-bounce 1.2s ease-in-out 1.3s infinite;
+}
+
+.four {
+    animation: ball-bounce 1.2s ease-in-out 1.6s infinite;
+}
+
+.five {
+    animation: ball-bounce 1.2s ease-in-out 1.8s infinite;
+}
+
+.six {
+    animation: ball-bounce 1.2s ease-in-out 2s infinite;
+}
+
+.ball_one {
+    /* background: #ee1515; */
+    background: url("../img/彩球.png") no-repeat;
+    background-size: cover;
+}
+
+.ball_two {
+    /* background: green; */
+    background: url("../img/彩球02.png") no-repeat;
+    background-size: cover;
+}
+
+.ball_three {
+    /* background: blue; */
+    background: url("../img/彩球03.png") no-repeat;
+    background-size: cover;
+}
+
+.ball_four {
+    /* background: palevioletred; */
+    background: url("../img/彩球05.png") no-repeat;
+    background-size: cover;
+}
+
+.ball_five {
+    background: purple;
+}
+
+.ball_six {
+    background: #D26900
+}
+
+/* .ball__button {
+    background-color: #ee1515;
+    border-radius: 50%;
+    border: 5px solid black;
+    display: block;
+    height: 20px;
+    left: calc(50% - 15px);
+    position: absolute;
+    top: calc(50% - 10px);
+    width: 20px;
+    z-index: 3;
+} */
+
+/* .ball__bottom {
+    background: #ee1515;
+    border-top: 7px solid #ee1515;
+    bottom: 0;
+    display: block;
+    height: calc(50% - 7px);
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 2;
+} */
+
+/* .ball__bottom:after {
+    content: '';
+    animation: ball-after-anim 2s ease-in-out infinite;
+    background: linear-gradient(to bottom, transparent 0%, #999999 100%);
+    bottom: 0;
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 4;
+} */
+
+.ballShadow {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: block;
+    height: 20px;
+    position: relative;
+    width: 120px;
+    z-index: 1;
+    clip-path: ellipse(22% 34% at 50% 50%);
+}
+
+.one_shadow {
+    animation: ball-shadow 1.2s ease-in-out 0.8s infinite;
+}
+
+.two_shadow {
+    animation: ball-shadow 1.2s ease-in-out 1s infinite;
+}
+
+.three_shadow {
+    animation: ball-shadow 1.2s ease-in-out 1.3s infinite;
+}
+
+.four_shadow {
+    animation: ball-shadow 1.2s ease-in-out 1.8s infinite;
+}
+
+
+.tipBox {
+    width: 72%;
+}
+
+
+/* 小球动画 */
+@keyframes ball-bounce {
+    0% {
+        bottom: 40px;
+        /* clip-path: ellipse(22% 32% at 50% 50%); */
+        /* clip-path: ellipse(50% 50% at 50% 50%); */
+    }
+
+    50% {
+        /* bottom: -50px; */
+        bottom: 20px;
+    }
+
+    70% {
+        /* bottom: -50px; */
+        bottom: 20px;
+        /* clip-path: ellipse(31% 24% at 50% 50%); */
+        /* clip-path: ellipse(50% 50% at 50% 50%); */
+    }
+
+    100% {
+        bottom: 40px;
+        /* clip-path: ellipse(22% 32% at 50% 50%); */
+        /* clip-path: ellipse(50% 50% at 50% 50%); */
+    }
+}
+
+@-webkit-keyframes ball-bounce {
+    0% {
+        bottom: 40px;
+    }
+
+    50% {
+        bottom: 20px;
+    }
+
+    70% {
+        bottom: 20px;
+    }
+
+    100% {
+        bottom: 40px;
+    }
+}
+
+@keyframes ball-shadow {
+    0% {
+        bottom: 30px;
+        clip-path: ellipse(22% 34% at 50% 50%);
+    }
+
+    70% {
+        bottom: 25px;
+        clip-path: ellipse(31% 18% at 50% 50%);
+    }
+
+    100% {
+        bottom: 30px;
+        clip-path: ellipse(22% 34% at 50% 50%);
+    }
+}
+
+@-webkit-keyframes ball-shadow {
+    0% {
+        bottom: 30px;
+        clip-path: ellipse(22% 34% at 50% 50%);
+    }
+
+    70% {
+        bottom: 25px;
+        clip-path: ellipse(31% 18% at 50% 50%);
+    }
+
+    100% {
+        bottom: 30px;
+        clip-path: ellipse(22% 34% at 50% 50%);
+    }
+}
+
+@keyframes ball-before-anim {
+    0% {
+        height: 30px;
+        left: 50%;
+        top: 45%;
+        width: 30px;
+    }
+
+    50% {
+        height: 35px;
+        left: 47%;
+        top: 80%;
+        width: 45px;
+    }
+
+    70% {
+        height: 35px;
+        left: 47%;
+        top: 80%;
+        width: 45px;
+    }
+
+    100% {
+        height: 30px;
+        left: 50%;
+        top: 45%;
+        width: 30px;
+    }
+}
+
+@-webkit-keyframes ball-before-anim {
+    0% {
+        height: 30px;
+        left: 50%;
+        top: 45%;
+        width: 30px;
+    }
+
+    50% {
+        height: 35px;
+        left: 47%;
+        top: 80%;
+        width: 45px;
+    }
+
+    70% {
+        height: 35px;
+        left: 47%;
+        top: 80%;
+        width: 45px;
+    }
+
+    100% {
+        height: 30px;
+        left: 50%;
+        top: 45%;
+        width: 30px;
+    }
+}
+
+
+@keyframes ball-after-anim {
+    0% {
+        background: linear-gradient(to bottom, transparent 0%, #555 100%);
+        height: 60%;
+    }
+
+    50% {
+        background: linear-gradient(to bottom, transparent 0%, #777 100%);
+        height: 100%;
+    }
+
+    70% {
+        background: linear-gradient(to bottom, transparent 0%, #777 100%);
+        height: 100%;
+    }
+
+    100% {
+        background: linear-gradient(to bottom, transparent 0%, #555 100%);
+        height: 60%;
+    }
+}
+
+@-webkit-keyframes ball-after-anim {
+    0% {
+        background: linear-gradient(to bottom, transparent 0%, #555 100%);
+        height: 60%;
+    }
+
+    50% {
+        background: linear-gradient(to bottom, transparent 0%, #777 100%);
+        height: 100%;
+    }
+
+    70% {
+        background: linear-gradient(to bottom, transparent 0%, #777 100%);
+        height: 100%;
+    }
+
+    100% {
+        background: linear-gradient(to bottom, transparent 0%, #555 100%);
+        height: 60%;
+    }
+}
+
+/* 选卡 */
+.cardContent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('../img/card.jpg') no-repeat;
+    background-size: 100% 100%;
+    display: none
+}
+
+.cardBox {}
+
+.cardItem {
+    position: relative;
+    top: 15%;
+}
+
+.card {
+    width: 90%;
+    height: 2rem;
+    margin: 0 auto 25px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 2.5rem;
+    font-size: 0.3rem;
+    background: url('../img/圣诞卡片.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+.card {
+    animation-duration: 1.5s;
+    -webkit-animation-delay: 1.5s;
+}
+
+.cardInfo {
+    position: absolute;
+    /* bottom: -27px;
+    left: 65%; */
+    bottom: 20px;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+    padding: 0.1rem 0;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.cardInfo p {
+    font-size: 0.3rem;
+    color: #fff;
+    text-align: center;
+}
+
+.cardOne {
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+}
+
+.cardtwo {
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+}
+
+.cardThree {
+    animation-delay: 1.5s;
+    -webkit-animation-delay: 1.5s;
+}
+
+.numThree {
+    animation-delay: 4s;
+    -webkit-animation-delay: 4s;
+}
+
+#collect {
+    position: relative;
+    max-width: 750px;
+    margin: 0 auto;
+    display: none;
+}
+
+.card-ball {
+    margin: 1rem 0;
+
+}
+
+.card-ball .card-ball-top {
+    width: 2rem;
+    height: 1rem;
+    margin: 0 auto;
+    transform: rotate(90deg);
+    transform-origin: 83% 100%;
+    /* background-color: blue; */
+    border-radius: 100px 100px 0 0;
+}
+
+.card-ball .card-ball-bottom {
+    width: 2rem;
+    height: 1rem;
+    margin: 0 auto;
+    /* background-color: blue; */
+    border-radius: 0 0 100px 100px;
+}
+
+.num {
+    font-size: 0.56rem;
+}
+
+/* .numOne {
+    font-size: 0.4rem;
+}
+
+.numTwo {
+    font-size: 0.56rem;
+}
+
+.numThree {
+    font-size: 0.6rem;
+} */
+
+.singleVision {
+    position: absolute;
+    top: -1rem;
+    left: 0.5rem;
+    width: 0.5rem;
+    height: 0.6rem;
+    background: url('../img/icon1.png') no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+#gift {
+    width: 85%;
+    height: 2rem;
+    padding: 5px 10px;
+    font-size: 0.28rem;
+}
+
+.inpText {
+    width: 85%;
+    padding: 5px 10px;
+    margin-bottom: 0.2rem;
+    font-size: 0.28rem;
+}
+
+/* 树 */
+.treeBox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('../img/treeBox2.jpg') no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    display: none;
+}
+
+#snow {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    max-width: 750px;
+}
+
+.tree {
+    position: fixed;
+    bottom: 1rem;
+    z-index: 0;
+    width: 100%;
+    max-width: 750px;
+}
+
+.tree img {
+    height: 12rem;
+}
+
+.tree-ballBox {
+    /* position: absolute;
+    top: 6.4rem;
+    left: 2rem; */
+    position: absolute;
+    bottom: 0.4rem;
+    right: 1rem;
+}
+
+.tree-ballBox .tree-ball {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: blue;
+    border-radius: 100%;
+    font-size: 12px;
+}
+
+.tree-ballBox .tree-ball:before {
+    content: '';
+    /* animation: ball-before-anim 2s ease-in-out infinite; */
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.25) 22%, rgba(255, 255, 255, 0) 70%);
+    display: block;
+    height: 30px;
+    position: absolute;
+    width: 30px;
+    margin-left: 5px;
+    margin-top: -7px;
+    z-index: 4;
+}
+
+.myWish {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    margin: auto;
+    z-index: 100000000;
+}
+
+.ui-btn-lg-nowhole {
+    display: block;
+    text-align: center;
+    width: 3rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    font-size: 0.3rem;
+    border-radius: 3px;
+    margin: auto;
+}
+
+.rules {
+    position: absolute;
+    right: 4%;
+    top: 10%;
+    width: 45%;
+    padding: 8px;
+    color: #fff;
+    border: 1px dashed;
+    border-radius: 10px;
+    font-size: 0.3rem;
+}
+
+/* 生成祝福语 */
+.wish-bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('../img/wish.jpg') no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    display: none;
+    z-index: 10000;
+}
+
+.blessing {
+    width: 80%;
+    /* width: 6rem; */
+    font-size: 0.24rem;
+    line-height: 1.7;
+    text-align: justify;
+    position: relative;
+    /* top: 38%;
+    left: 50%; */
+    top: 28%;
+    left: 2%;
+    z-index: 0;
+    /* transform: translate(-50%, -50%); */
+    color: #f94852;
+    font-weight: bold;
+    background: url(../img/kuang.png) no-repeat;
+    background-size: 100% 100%;
+    padding: 0.6rem;
+}
+
+.generate {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0.4rem;
+    margin: auto;
+    z-index: 100000000;
+}
+
+.ui-btn-lg-nowhole {
+    display: block;
+    text-align: center;
+    width: 3rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    font-size: 0.3rem;
+    border-radius: 3px;
+    margin: auto;
+}
+
+.qr {
+    position: absolute;
+    bottom: 0.1rem;
+    right: 0.2rem;
+    text-align: center;
+    display: none;
+}
+
+.qr img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.qr p {
+    font-size: 0.22rem;
+    color: #fff;
+}
+
+@media screen and (min-width: 414px) {
+
+    /* .ballPanel {
+        top: 66%;
+    } */
+}
+
+@media screen and (device-width:768px) {
+    .tree img {
+        height: 9rem;
+    }
+
+    .tree-ballBox .tree-ball {
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+        background-color: blue;
+        border-radius: 100%;
+        font-size: 16px;
+    }
+
+    .tip {
+        font-size: 0.2rem;
+    }
+
+    .card {
+        height: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .cardInfo {
+        bottom: 24px;
+    }
+
+    .blessing {
+        top: 25%;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .cardItem {
+        position: relative;
+        top: 6%;
+    }
+
+    .ballPanel {
+        top: 63%;
+    }
+
+    .blessing {
+        top: 27%;
+    }
+
+    .tree-ballBox .tree-ball {
+        width: 45px;
+        height: 45px;
+        margin: 0 auto;
+        line-height: 45px;
+        text-align: center;
+        color: #fff;
+        background-color: blue;
+        border-radius: 100%;
+        font-size: 16px;
+    }
+
+    .tree img {
+        height: 8rem;
+    }
+
+    .rules {
+        width: 42%;
+        right: 6%;
+        top: 10%;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .tree img {
+        height: 8rem;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .blessing {
+        top: 25%;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .blessing {
+        top: 26%;
+    }
+}
+
+.remainder {
+    text-align: right;
+    padding-right: 15px;
+    color: #999;
+}
+
+.remainder span {
+    color: #999;
+}
+
+.ui-btn-wrap {
+    padding: 10px 12px 0;
+}
